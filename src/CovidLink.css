@@ -1,0 +1,27 @@
+
+.covidContainer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(173, 2, 36);
+    border: 1px solid rgb(173, 2, 36);
+    width: 60%;
+}
+
+.covidPara {
+    margin-top: 3px;
+    margin-bottom: 3px
+}
+
+.covidLink {
+    margin-bottom: 0
+}Y
+
+
+@media (max-width: 550px) {
+    .covidContainer {
+        width:85%
+    }
+}

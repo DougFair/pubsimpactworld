@@ -1,0 +1,16 @@
+.ifColorList {
+    margin: 0 0 0 20px;
+}
+
+.covidlink {
+    display:flex;
+    justify-content:center
+}
+
+
+@media (max-width: 400px){
+    .ifColorList {
+        margin: 0 0 0 10px;
+        font-size: 1rem
+    }
+}
