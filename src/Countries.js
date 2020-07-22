@@ -20,6 +20,8 @@ selectCountry = (val) => {
       <div>
         <CountryDropdown
           value={country}
+          defaultOptionLabel="Select a country to search"
+          // priorityOptions={["AU"]}
           onChange={(val) => this.selectCountry(val)} />
       </div>
     );

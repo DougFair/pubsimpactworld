@@ -18,7 +18,7 @@ render (){
       {!this.props.inputedDate2 ? 
       <h2>No papers by authors from {this.props.country} published since {moment(this.props.inputedDate1, "YYYY-MM-DD").format("DD/MM/YYYY")}</h2>
       : 
-      <h2 className="noPapers">No papers published by authors from {this.props.country}between {moment(this.props.inputedDate1, "YYYY-MM-DD").format("DD/MM/YYYY")} - {moment(this.props.inputedDate2, "YYYY-MM-DD").format("DD/MM/YYYY")} </h2>
+      <h2 className="noPapers">No papers published by authors from {this.props.country} between {moment(this.props.inputedDate1, "YYYY-MM-DD").format("DD/MM/YYYY")} - {moment(this.props.inputedDate2, "YYYY-MM-DD").format("DD/MM/YYYY")} </h2>
       }
     </div>
   } else {
@@ -55,12 +55,12 @@ render (){
     <p className="customDateMessage" style={{textAlign: "center"}}>You can customise the dates of your search in the toolbar above or the journals in the top menubar</p>        
     { !this.props.idlistNoJournals.length && 
     <div>
-        <h2 className="dateHeading">Papers published by authors from {this.props.country} yesterday</h2>
+        <h2 className="dateHeading">Papers published yesterday by authors from {this.props.country}</h2>
         <h2 className="totalpapers">({this.props.papersList.length} in total)</h2>
     </div>
     }
     {!this.props.papersList.length && !this.props.idlistNoJournals.length && 
-    <p className="noPapers">There were papers published by authors from {this.props.country} yesterday in the selected journal(s).</p>
+    <p className="noPapers">There were no papers published by authors from {this.props.country} yesterday in the selected journal(s).</p>
     }
     </div>
   }
@@ -167,7 +167,7 @@ if (this.props.inputedDate1 || this.props.idlistNoJournals.length){
             {listDisplay}
             {weeklyListDisplay && 
             <div>
-                <h2 className="dateHeading">Papers published by authors from {this.props.country} in the preceeding 6 days</h2>
+                <h2 className="dateHeading">Papers published in the preceeding 6 days by authors from {this.props.country} </h2>
                 <h2 className="totalpapers">({this.props.idlistWeek.length} in total)</h2>
                 {weeklyListDisplay}
             </div>

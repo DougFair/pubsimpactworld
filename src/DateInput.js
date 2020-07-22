@@ -30,7 +30,7 @@ class DateInput extends Component {
         <div className="dateInput">
                 <div className="dropdown">
                     <div>
-                    <p className= "countryFormTitle">Select a country</p>
+                    <p className= "countryFormTitle">Country selector</p>
                     </div>
                     <div className="dropdownMenu">
                     <Countries
