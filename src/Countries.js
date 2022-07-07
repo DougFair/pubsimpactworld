@@ -10,17 +10,25 @@ state = {
 
  
 selectCountry = (val) => {
+    this.setState({country: val})
     this.props.handleCountryChange(val)
   }
  
 
   render () {
-    const { country } = this.state;
+    let { country } = this.state;
+    let defaultOptionLabel = ""
+    country === "Aruba" || !country ?
+      defaultOptionLabel="Select a country to search" 
+      :
+      defaultOptionLabel=country
+    
+    
     return (
       <div>
         <CountryDropdown
           value={country}
-          defaultOptionLabel="Select a country to search"
+          defaultOptionLabel={defaultOptionLabel}
           // priorityOptions={["AU"]}
           onChange={(val) => this.selectCountry(val)} />
       </div>

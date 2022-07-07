@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import './DateInput.css'
 import Countries from './Countries'
+import Keywords from './Keywords'
 
 class DateInput extends Component {
     state = {
@@ -35,6 +36,11 @@ class DateInput extends Component {
                     <div className="dropdownMenu">
                     <Countries
                         handleCountryChange={this.handleCountryChange}
+                        country={this.props.country}
+                    />
+                    <Keywords
+                    handleKeywordChange={this.handleKeywordChange}
+                    keyword={this.props.keyword}
                     />
                     </div>
                 </div>

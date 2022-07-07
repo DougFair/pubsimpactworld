@@ -117,7 +117,7 @@ class App extends Component {
     let loop = 0
     this.state.splitjlist.forEach(jlistitem => {
     const jlistString = jlistitem.toString().replace(/,/g,"").slice(0,-4)
-    let urlunencoded = `(((${jlistString})) AND ${this.state.country}[Affiliation]) AND ("`
+    let urlunencoded = `(((${jlistString})) AND ${this.state.country}[Affiliation]) AND protein folding[Text Word] AND ("`
     const urlEncoded = encodeURIComponent(urlunencoded)
     const dateParamsEncoded = encodeURIComponent(dateParams)
     const dateParamsEncoded2 = encodeURIComponent(dateParams2)
@@ -394,6 +394,7 @@ countrySelect = (country) => {
             <DateInput
               dateInput = {this.dateInput}
               countrySelect = {this.countrySelect}
+              country={this.state.country}
             /> 
             <SubHeading />  
             {(this.state.inputedDate1 || this.state.papersListNoJournals.length > 0) &&
