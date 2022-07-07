@@ -1,34 +1,29 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
- 
- 
 class Keywords extends Component {
+  state = {
+    keyword: "",
+  };
 
-state = { 
-    keyword: '', 
-};
+  selectKeyword = (val) => {
+    this.setState({ keyword: val });
+    this.props.handleKeywordChange(val);
+  };
 
- 
-selectKeyword = (val) => {
-    this.setState({keyword: val})
-    this.props.handleKeywordChange(val)
-  }
-
-
-  render () {
+  render() {
     let { keyword } = this.state;
 
-    
     return (
       <div>
         <input
-        type="text"
-            name="keyword"
-          value={country}
-          onChange={this.selectKeyword} />
+          type="text"
+          name="keyword"
+          value={keyword}
+          onChange={this.selectKeyword}
+        />
       </div>
     );
   }
 }
 
-export default Keywords
+export default Keywords;
